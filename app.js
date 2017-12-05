@@ -9,7 +9,7 @@ import graphHTTP from "express-graphql";
 import { makeExecutableSchema } from 'graphql-tools';
 import openBrowser from 'react-dev-utils/openBrowser';
 import clearConsole from 'react-dev-utils/clearConsole';
-const PORT = 4000;
+const PORT = 3000;
 const schema = makeExecutableSchema({ typeDefs, resolvers });
 const App = express();
 const storage = multer.diskStorage({
