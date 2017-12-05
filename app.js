@@ -20,6 +20,7 @@ const storage = multer.diskStorage({
   }
 });
 App.use(express.static('build'));
+App.use(express.static('images'));
 App.get('/', cors(), (req, res) => res.sendFile(path.join(__dirname, 'build/index.html')));
 App.post('/upload', multer({ storage }).any(), (req, res) => res('OK'));
 App.post('/graphql', graphHTTP({
