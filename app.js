@@ -9,7 +9,7 @@ import graphHTTP from "express-graphql";
 import { makeExecutableSchema } from 'graphql-tools';
 import openBrowser from 'react-dev-utils/openBrowser';
 import clearConsole from 'react-dev-utils/clearConsole';
-const PORT = 3000;
+const PORT = process.env.PORT || 3000, HOST = '0.0.0.0';
 const schema = makeExecutableSchema({ typeDefs, resolvers });
 const App = express();
 const storage = multer.diskStorage({
@@ -25,7 +25,7 @@ App.post('/upload', multer({ storage }).any(), (req, res) => res('OK'));
 App.post('/graphql', graphHTTP({
   schema, pretty: true, rootValue: models
 }));
-App.listen(PORT, () => {
+App.listen(PORT, HOST, () => {
   clearConsole();
-  console.log(`Heroku Server Listening on Port ${PORT}...`);
+  console.log(`Heroku Server Listening on Port http://${HOST}:${PORT}...`);
 });
