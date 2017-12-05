@@ -23,7 +23,7 @@
     "babel-preset-env": "^1.2.1"
   },
   "scripts": {
-    "start": "babel-node app",
+    "start": "node app",
     "demon": "nodemon --exec babel-node -- app"
   },
   "engines": {
