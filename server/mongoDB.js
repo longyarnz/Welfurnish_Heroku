@@ -9,4 +9,4 @@ export default () => {
 		console.log("Database Connected...");
 	});
 	Mongoose.Promise = promise;
-}
+}   
