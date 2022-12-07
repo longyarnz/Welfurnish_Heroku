@@ -9,7 +9,7 @@
     "babel-core": "^6.25.0",
     "babel-loader": "^6.4.1",
     "cors": "^2.8.3",
-    "express": "^4.15.4",
+    "express": "^4.17.3",
     "express-graphql": "^0.6.7",
     "faker": "^4.1.0",
     "graphql": "^0.9.6",
